@@ -14,7 +14,7 @@ attr_reader :id
       CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY,
         name TEXT,
-        grage INTEGER
+        grade INTEGER
       )
       SQL
     DB[:conn].execute(sql)
@@ -25,6 +25,13 @@ attr_reader :id
       DROP TABLE students
       SQL
 
-      DB[:conn].execute(sql)
-    end
+    DB[:conn].execute(sql)
+  end
+
+  def save
+    sql = <<-SQL (
+      INSERT INTO students (name, grade)
+    )
+  end
+
 end
